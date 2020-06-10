@@ -201,6 +201,7 @@ private slots:
     void OnLoadAmiibo();
     void OnOpenYuzuFolder();
     void OnAbout();
+    void OnCheatSearch();
     void OnToggleFilterBar();
     void OnDisplayTitleBars(bool);
     void InitializeHotkeys();

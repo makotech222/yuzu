@@ -22,6 +22,9 @@ add_executable(yuzu
     compatdb.ui
     compatibility_list.cpp
     compatibility_list.h
+    cheatsearch.cpp
+    cheatsearch.h
+    cheatsearch.ui
     configuration/config.cpp
     configuration/config.h
     configuration/configure.ui

@@ -107,6 +107,7 @@
     <addaction name="action_Rederive"/>
     <addaction name="separator"/>
     <addaction name="action_Capture_Screenshot"/>
+     <addaction name="action_Cheat_Search"/>
    </widget>
    <widget class="QMenu" name="menu_Help">
     <property name="title">
@@ -179,6 +180,11 @@
     <string>About yuzu</string>
    </property>
   </action>
+   <action name="action_Cheat_Search">
+     <property name="text">
+       <string>Cheat Search</string>
+     </property>
+   </action>
   <action name="action_Single_Window_Mode">
    <property name="checkable">
     <bool>true</bool>

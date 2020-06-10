@@ -96,6 +96,7 @@ static FileSys::VirtualFile VfsDirectoryCreateFileWrapper(const FileSys::Virtual
 #include "yuzu/about_dialog.h"
 #include "yuzu/bootmanager.h"
 #include "yuzu/compatdb.h"
+#include "yuzu/cheatsearch.h"
 #include "yuzu/compatibility_list.h"
 #include "yuzu/configuration/config.h"
 #include "yuzu/configuration/configure_dialog.h"
@@ -854,6 +855,7 @@ void GMainWindow::ConnectMenuEvents() {
     connect(ui.action_Rederive, &QAction::triggered, this,
             std::bind(&GMainWindow::OnReinitializeKeys, this, ReinitializeKeyBehavior::Warning));
     connect(ui.action_About, &QAction::triggered, this, &GMainWindow::OnAbout);
+    connect(ui.action_Cheat_Search, &QAction::triggered, this, &GMainWindow::OnCheatSearch);
 }
 
 void GMainWindow::OnDisplayTitleBars(bool show) {
@@ -1968,6 +1970,11 @@ void GMainWindow::OnOpenYuzuFolder() {
 void GMainWindow::OnAbout() {
     AboutDialog aboutDialog(this);
     aboutDialog.exec();
+}
+
+void GMainWindow::OnCheatSearch() {
+    CheatSearch cheatSearch(this);
+    cheatSearch.exec();
 }
 
 void GMainWindow::OnToggleFilterBar() {
